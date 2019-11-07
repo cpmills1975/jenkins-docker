@@ -3,7 +3,7 @@ LABEL maintainer="@cpmills1975"
 
 USER root
 
-# Install the latest Docker CE binaries and add user `jenkins` to the docker group specified by docker_gid
+# Install the latest Docker CE command line binaries
 RUN apt-get update && \
     apt-get -y install apt-transport-https \
       ca-certificates \
@@ -16,7 +16,7 @@ RUN apt-get update && \
       $(lsb_release -cs) \
       stable" && \
    apt-get update && \
-   apt-get -y install docker-ce 
+   apt-get -y install docker-ce-cli
 
 # drop back to the regular jenkins user - good practice
 USER jenkins
