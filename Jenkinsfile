@@ -16,8 +16,10 @@ pipeline {
 
 		stage('Test image') {
 			steps {
-				app.inside {
-					sh 'echo "Need to define some tests here!"'
+				script {
+					app.inside {
+						sh 'echo "Need to define some tests here!"'
+					}
 				}
 			}
 		}
