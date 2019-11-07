@@ -10,7 +10,7 @@ pipeline {
 
 		stage('Build image') {
 			steps {
-				sh 'docker build -t cpmills/jenkins-docker --build-arg docker_gid=$(getent group docker | awk -F':' '{print $3}') ."
+				sh 'docker build -t cpmills/jenkins-docker .'
 			}
 		}
 

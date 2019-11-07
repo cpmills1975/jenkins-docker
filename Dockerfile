@@ -1,9 +1,6 @@
 FROM jenkins/jenkins
 LABEL maintainer="@cpmills1975"
 
-ARG docker_gid
-
-
 USER root
 
 # Install the latest Docker CE binaries and add user `jenkins` to the docker group specified by docker_gid
