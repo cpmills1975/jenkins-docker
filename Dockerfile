@@ -19,8 +19,7 @@ RUN apt-get update && \
       $(lsb_release -cs) \
       stable" && \
    apt-get update && \
-   apt-get -y install docker-ce && \
-   usermod -aG $docker_gid jenkins
+   apt-get -y install docker-ce 
 
 # drop back to the regular jenkins user - good practice
 USER jenkins
