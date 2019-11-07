@@ -10,7 +10,9 @@ pipeline {
 
 		stage('Build image') {
 			steps {
-				sh 'docker build -t cpmills/jenkins-docker .'
+				script {
+					app = docker.build('cpmills/jenkins-docker')
+				}
 			}
 		}
 
