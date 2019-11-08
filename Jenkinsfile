@@ -8,20 +8,9 @@ pipeline {
     }
 
     stage('Build image') {
-      parallel {
-        stage('Build image') {
-          steps {
-            script {
-              app = docker.build('cpmills/jenkins-docker')
-            }
-
-          }
-        }
-
-        stage('Test sleep') {
-          steps {
-            sleep 1
-          }
+      steps {
+        script {
+          app = docker.build('cpmills/jenkins-docker')
         }
 
       }
