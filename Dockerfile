@@ -16,7 +16,7 @@ RUN apt-get update && \
       $(lsb_release -cs) \
       stable" && \
    apt-get update && \
-   apt-get -y install docker-ce-cli
+   apt-get -y install docker-ce-cli docker-compose
 
 # drop back to the regular jenkins user - good practice
 USER jenkins
